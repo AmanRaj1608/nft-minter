@@ -31,7 +31,7 @@ const Index = ({ signerAddress, contract_1155, contract_721, networkId }) => {
       >
         <div className={classes.paper}>
           <Typography variant="h6">
-            Your current Network is {networkId.name} (chain id {networkId.chainId}). Change it to Matic testnet 80001 or Matic mainnet 197.
+            Your current Network is {networkId.name} (chain id {networkId.chainId}). Change it to Matic testnet 80001 or Matic mainnet 137.
           </Typography>
         </div>
 
