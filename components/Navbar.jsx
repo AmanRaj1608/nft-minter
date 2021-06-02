@@ -15,7 +15,7 @@ const ConnectWallet = dynamic(() => import("./ConnectWallet"), {
   ssr: false,
 });
 
-const Navbar = ({ toggleMode, darkMode, signerAddress, contract_1155, contract_721, setContract_1155, setContract_721, setSignerAddress, setNetworkId }) => {
+const Navbar = ({ toggleMode, darkMode, signerAddress, contract_721, setContract_721, setSignerAddress, setNetworkId }) => {
   const classes = useStyles();
   const theme = useTheme();
 
@@ -39,9 +39,9 @@ const Navbar = ({ toggleMode, darkMode, signerAddress, contract_1155, contract_7
 
         <ConnectWallet
           signerAddress={signerAddress}
-          contract_1155={contract_1155}
+          // contract_1155={contract_1155}
           contract_721={contract_721}
-          setContract_1155={setContract_1155}
+          // setContract_1155={setContract_1155}
           setContract_721={setContract_721}
           setSignerAddress={setSignerAddress}
           setNetworkId={setNetworkId}

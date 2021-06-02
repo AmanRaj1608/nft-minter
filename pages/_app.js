@@ -10,7 +10,7 @@ import Navbar from '../components/Navbar';
 const App = ({ Component, pageProps }) => {
   const [darkMode, setDarkMode] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-  const [contract_1155, setContract_1155] = useState(null);
+  // const [contract_1155, setContract_1155] = useState(null);
   const [contract_721, setContract_721] = useState(null);
   const [signerAddress, setSignerAddress] = useState("");
   const [networkId, setNetworkId] = useState('');
@@ -56,9 +56,9 @@ const App = ({ Component, pageProps }) => {
           darkMode={darkMode}
           toggleMode={toggleMode}
           signerAddress={signerAddress}
-          contract_1155={contract_1155}
+          // contract_1155={contract_1155}
           contract_721={contract_721}
-          setContract_1155={setContract_1155}
+          // setContract_1155={setContract_1155}
           setContract_721={setContract_721}
           setSignerAddress={setSignerAddress}
           setNetworkId={setNetworkId}
@@ -67,7 +67,7 @@ const App = ({ Component, pageProps }) => {
           {...pageProps}
           isMobile={isMobile}
           signerAddress={signerAddress}
-          contract_1155={contract_1155}
+          // contract_1155={contract_1155}
           contract_721={contract_721}
           networkId={networkId}
         />

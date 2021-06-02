@@ -7,13 +7,13 @@ const providerOptions = {
   walletconnect: {
     package: WalletConnectProvider,
     options: {
-      infuraId: '196440d5d02d41dfa2a8ee5bfd2e96bd',
+      infuraId: '6d3abdf3d8e54645b5d1ef31088621b9',
     },
   },
 };
 
 const web3Modal = new Web3Modal({
-  network: "kovan",
+  network: "mumbai",
   cacheProvider: true,
   providerOptions,
 });

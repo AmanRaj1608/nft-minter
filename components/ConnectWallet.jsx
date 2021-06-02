@@ -7,13 +7,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useWeb3Modal } from "../hooks/web3";
 
 const abi = require('../config/abi.json');
-const abi_1155 = require('../config/abi_1155.json');
+// const abi_1155 = require('../config/abi_1155.json');
 
 const truncateAddress = (address) => {
   return address.slice(0, 6) + "..." + address.slice(-4);
 };
 
-const ConnectWallet = ({ signerAddress, contract_1155, contract_721, setContract_1155, setContract_721, setSignerAddress , setNetworkId}) => {
+const ConnectWallet = ({ signerAddress, contract_721, setContract_721, setSignerAddress , setNetworkId}) => {
   const classes = useStyles();
   // const [isWaiting, setWaiting] = useState(false)
   // const [isSent, setSent] = useState(false)
@@ -33,14 +33,14 @@ const ConnectWallet = ({ signerAddress, contract_1155, contract_721, setContract
       // if(chainId !== 8001)
 
       // for erc721 mainnet and testnet
-      setContract_721(new ethers.Contract("0xD05a795d339886bB8Dd46cfe2ac009d7f1E48A64", abi));
+      setContract_721(new ethers.Contract("0x5dcaE7ebb1AAFF275D2a8763fDb6D1192848D77B", abi));
 
       // for erc1155 mainnet
-      if (networkId == "137") setContract_1155(new ethers.Contract("0xd52a86110c9a7597a057Ae2bB4F577B6CD42a639", abi_1155));
+      // if (networkId == "137") setContract_1155(new ethers.Contract("0xd52a86110c9a7597a057Ae2bB4F577B6CD42a639", abi_1155));
       // for erc1155 testnet
-      else setContract_1155(new ethers.Contract("0x692d14f95012778aBb720Be8510f8eAeEaf74F44", abi_1155));
+      // else setContract_1155(new ethers.Contract("0x692d14f95012778aBb720Be8510f8eAeEaf74F44", abi_1155));
 
-      console.log(contract_721, contract_1155)
+      console.log(contract_721)
     }
     if (provider) getAddress();
     else setSignerAddress("");
