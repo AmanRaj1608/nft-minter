@@ -176,6 +176,21 @@ const Form = ({ signerAddress, setIsLoading, setTrsHash, setErr, networkId, setO
         />
       </div>
 
+//attributes 1 -trait and type
+   </div>
+      <div className={classes.formGroup}>
+        <label className={classes.formGroupLabel}>Social Media URL (optional)</label>
+        <input
+          type="url"
+          placeholder="
+          className={classes.formGroupInput}
+          value={surl}
+//           pattern="https?://.+"
+          onChange={(e) => setSurl(e.target.value)}
+        />
+      </div>
+
+
       <div className={classes.endCont}>
 
         <div className={classes.formGroup} style={{ margin: '0.5rem 0' }}>
