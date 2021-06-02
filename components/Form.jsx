@@ -5,8 +5,9 @@ import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from '@material-ui/core/styles';
+import { pinJSONToIPFS, pinFileToIPFS} from '../utils/ipfs';
 
-import { pinJSONToIPFS, pinFileToIPFS, encodedParams } from '../utils/ipfs';
+// import { pinJSONToIPFS, pinFileToIPFS, encodedParams } from '../utils/ipfs';
 
 const abi = require('../config/abi.json');
 const abi_1155 = require('../config/abi_1155.json');
