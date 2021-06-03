@@ -10,7 +10,7 @@ import { pinJSONToIPFS, pinFileToIPFS} from '../utils/ipfs';
 // import { pinJSONToIPFS, pinFileToIPFS, encodedParams } from '../utils/ipfs';
 
 const abi = require('../config/abi.json');
-const abi_1155 = require('../config/abi_1155.json');
+// const abi_1155 = require('../config/abi_1155.json');
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -83,7 +83,7 @@ const Form = ({ signerAddress, setIsLoading, setTrsHash, setErr, networkId, setO
 
       if (nftType === 'ERC721') {
         const web3 = new Web3(window.ethereum)
-        const contract_721 = new web3.eth.Contract(abi, "0x51C5F4392C01Dd5F1BCfE512916Cc560703e2a3d");
+        const contract_721 = new web3.eth.Contract(abi, "0x3C0B1fC821b098F79e54Ea311f3abdcCde55f2d9");
 
         const txnhash = await contract_721.methods.mintToCaller(signerAddress, 'https://gateway.pinata.cloud/ipfs/' + ipfsHash)
           .send({ from: signerAddress })
@@ -175,21 +175,6 @@ const Form = ({ signerAddress, setIsLoading, setTrsHash, setErr, networkId, setO
           onChange={(e) => setSurl(e.target.value)}
         />
       </div>
-
-//attributes 1 -trait and type
-   </div>
-      <div className={classes.formGroup}>
-        <label className={classes.formGroupLabel}>Social Media URL (optional)</label>
-        <input
-          type="url"
-          placeholder="
-          className={classes.formGroupInput}
-          value={surl}
-//           pattern="https?://.+"
-          onChange={(e) => setSurl(e.target.value)}
-        />
-      </div>
-
 
       <div className={classes.endCont}>
 
