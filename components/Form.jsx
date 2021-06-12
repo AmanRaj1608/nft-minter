@@ -83,7 +83,7 @@ const Form = ({ signerAddress, setIsLoading, setTrsHash, setErr, networkId, setO
 
       if (nftType === 'ERC721') {
         const web3 = new Web3(window.ethereum)
-        const contract_721 = new web3.eth.Contract(abi, "0x3C0B1fC821b098F79e54Ea311f3abdcCde55f2d9");
+        const contract_721 = new web3.eth.Contract(abi, "0x238BEA8ed559f2eA8CFD656033A27Ee2A2779379");
 
         const txnhash = await contract_721.methods.mintToCaller(signerAddress, 'https://gateway.pinata.cloud/ipfs/' + ipfsHash)
           .send({ from: signerAddress })
