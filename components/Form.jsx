@@ -8,10 +8,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import { pinJSONToIPFS, pinFileToIPFS} from '../utils/ipfs';
 import Select from 'react-select';
 
-// import { pinJSONToIPFS, pinFileToIPFS, encodedParams } from '../utils/ipfs';
+import { pinJSONToIPFS, pinFileToIPFS, encodedParams } from '../utils/ipfs';
 
 const abi = require('../config/abi.json');
-// const abi_1155 = require('../config/abi_1155.json');
+const abi_1155 = require('../config/abi_1155.json');
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -69,7 +69,7 @@ const Form = ({ signerAddress, setIsLoading, setTrsHash, setErr, networkId, setO
   const [imgSrc, setImgSrc] = useState("");
   const [nftType, setNftType] = useState('ERC721');
   const [selectedOption, setSelectedOption] = useState(null);
-  // const [ercTwoNum, setErcTwoNum] = useState(1);
+  const [ercTwoNum, setErcTwoNum] = useState(1);
   const [errors, setErrors] = useState({
     name: "",
     desc: "",
@@ -143,22 +143,22 @@ const Form = ({ signerAddress, setIsLoading, setTrsHash, setErr, networkId, setO
         setTrsHash(txnhash.transactionHash);
         console.log(txnhash.transactionHash);
         }
-      // 
+      
 
-      // } else if (nftType === 'ERC1155' && networkId.chainId === 137) {
-      //   const web3 = new Web3(window.ethereum)
-      //   const contract_1155 = new web3.eth.Contract(abi_1155, "0x692d14f95012778aBb720Be8510f8eAeEaf74F44");
+      } else if (nftType === 'ERC1155' && networkId.chainId === 137) {
+        const web3 = new Web3(window.ethereum)
+        const contract_1155 = new web3.eth.Contract(abi_1155, "0x692d14f95012778aBb720Be8510f8eAeEaf74F44");
 
-      //   const txnhash = await contract_1155.methods.mintTocaller(signerAddress, ercTwoNum, encodedParams, ipfsHash)
-      //     .send({ from: signerAddress })
-      //     .on("confirmation", () => { })
-      //     .on("error", (error, receipt) => {
-      //       setErr("Transaction Failed");
-      //     })
+        const txnhash = await contract_1155.methods.mintTocaller(signerAddress, ercTwoNum, encodedParams, ipfsHash)
+          .send({ from: signerAddress })
+          .on("confirmation", () => { })
+          .on("error", (error, receipt) => {
+            setErr("Transaction Failed");
+          })
 
-      //   setTrsHash(txnhash.transactionHash);
-      //   console.log(txnhash.transactionHash);
-      // }
+        setTrsHash(txnhash.transactionHash);
+        console.log(txnhash.transactionHash);
+      }
 
       toast("NFT Minted", { type: "success" });
       setIsLoading(false);
@@ -270,15 +270,15 @@ const Form = ({ signerAddress, setIsLoading, setTrsHash, setErr, networkId, setO
             >
               ERC721
           </Button>
-            {/* <Button className={classes.typeButton}
+            {<Button className={classes.typeButton}
               disabled={nftType === 'ERC1155' ? true : false}
               onClick={() => setNftType('ERC1155')}
             >
               ERC1155
-            </Button> */}
+            </Button>}
           </div>
 
-          {/* {nftType === 'ERC1155' && <div className={classes.quant}>
+          {{nftType === 'ERC1155' && <div className={classes.quant}>
             Quantity
             <input
               type="number"
@@ -287,7 +287,7 @@ const Form = ({ signerAddress, setIsLoading, setTrsHash, setErr, networkId, setO
               value={ercTwoNum}
               onChange={(e) => setErcTwoNum(e.target.value)}
             />
-          </div>} */}
+          </div>}}
         </div>
 
       </div>
