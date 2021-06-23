@@ -33,7 +33,7 @@ const ConnectWallet = ({ signerAddress, contract_721, setContract_721, setSigner
       // if(chainId !== 8001)
 
       // for erc721 mainnet and testnet
-      setContract_721(new ethers.Contract("0x386a867B3F17d6aA84A8847677A847333Cc10aaB", abi));
+      setContract_721(new ethers.Contract("0xD05a795d339886bB8Dd46cfe2ac009d7f1E48A64", abi));
 
       // for erc1155 mainnet
       // if (networkId == "137") setContract_1155(new ethers.Contract("0xd52a86110c9a7597a057Ae2bB4F577B6CD42a639", abi_1155));
