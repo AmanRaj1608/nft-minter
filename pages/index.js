@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import Form from '../components/Form';
 
-const Index = ({ signerAddress, contract_721, networkId }) => {
+const Index = ({ signerAddress, contract_1155, contract_721, networkId }) => {
   const classes = useStyles();
   const [isLoading, setIsLoading] = useState(false);
   const [trsHash, setTrsHash] = useState('');
@@ -38,7 +38,7 @@ const Index = ({ signerAddress, contract_721, networkId }) => {
       </Modal>
       <div className={classes.title}>
         <Typography variant="h3" style={{ marginBottom: 5 }}>NFT Minter</Typography>
-        <Typography variant="h6" style={{ opacity: 0.5 }}>Mint ERC721 standard tokens on Polygon (Previously Matic Network) </Typography>
+        <Typography variant="h6" style={{ opacity: 0.5 }}>Mint ERC721 or ERC1155 standard tokens on Polygon (Previously Matic Network) </Typography>
       </div>
       {
         trsHash && <Typography variant="h6" style={{ marginBottom: 15 }}>
@@ -62,7 +62,7 @@ const Index = ({ signerAddress, contract_721, networkId }) => {
             :
             <Form
               signerAddress={signerAddress}
-              // contract_1155={contract_1155}
+              contract_1155={contract_1155}
               contract_721={contract_721}
               setIsLoading={setIsLoading}
               setTrsHash={setTrsHash}

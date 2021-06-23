@@ -38,10 +38,8 @@ const lightMuiTheme = createMuiTheme({
     error: {
       main: red.A400
     },
-    
     background: {
       default: "#FFF",
-      background:"https://i.imgur.com/2vOXiPV.jpg?1",
       highlight: "#F1F3F4"
     }
   },

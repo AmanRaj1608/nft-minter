@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
         {/* SEO Part */}
         <Head>
           <meta name="theme-color" content="#ee6f57" />
-         
+          {/* Template by https://amanraj.dev/ */}
 
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="apple-touch-icon" href="/icons/logo.png" />
