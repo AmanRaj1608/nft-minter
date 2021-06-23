@@ -1,0 +1,35 @@
+export const abi =[
+	{
+		"inputs": [],
+		"name": "retrieve",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "num",
+				"type": "uint256"
+			}
+		],
+		"name": "store",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+];
+export const bytecode ={
+	"generatedSources": [],
+	"linkReferences": {},
+	"object": "60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220126c7368433749bddc82c025408228ce4a158818f9821c23a50769b009feda1864736f6c63430008000033",
+	"opcodes": "PUSH1 0x56 PUSH1 0x37 PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH1 0x0 BYTE PUSH1 0x73 EQ PUSH1 0x2A JUMPI PUSH4 0x4E487B71 PUSH1 0xE0 SHL PUSH1 0x0 MSTORE PUSH1 0x0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST ADDRESS PUSH1 0x0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 SLT PUSH13 0x7368433749BDDC82C025408228 0xCE 0x4A ISZERO DUP9 XOR 0xF9 DUP3 SHR 0x23 0xA5 SMOD PUSH10 0xB009FEDA1864736F6C63 NUMBER STOP ADDMOD STOP STOP CALLER ",
+	"sourceMap": "20479:7684:0:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;20479:7684:0;;;;;;;;;;;;;;;;;"
+};
